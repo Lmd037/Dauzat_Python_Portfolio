@@ -184,7 +184,7 @@ df.columns = ['year', 'rank', 'company', 'revenue', 'profit']
 
 
 ```python
-df.head
+df.head()
 ```
 
 
