@@ -1,5 +1,5 @@
-# Dauzat_Python_Portfolio
-This is a portfolio that has all the codes I learned during Bisc 4503. 
+# Lance_Dauzat_Python_Portfolio
+This is my portfolio that has all the codes I learned during Bisc 4503. I hope to open my own dental office, and apply this knowledge to help run the office efficiently.
 
 ## Analyzing Patient Data
 
