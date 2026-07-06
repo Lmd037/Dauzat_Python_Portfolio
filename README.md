@@ -347,7 +347,8 @@ bin_sizes, _, _ = plt.hist(df.year[non_numeric_profits], bins= range(1955, 2006)
 ```
 
 
-![png](output_11_0.png)
+<img width="372" height="253" alt="output_11_0" src="https://github.com/user-attachments/assets/88d63f3e-ea73-4fa0-a200-139e499df195" />
+
 
 
 
@@ -406,7 +407,8 @@ plot(x, y1, ax, 'Increase in mean Fortune 500 company profit from 1955 to 2005',
 ```
 
 
-![png](output_16_0.png)
+<img width="432" height="267" alt="output_16_0" src="https://github.com/user-attachments/assets/f18338fe-011f-4108-8169-6c9d4a00f72f" />
+
 
 
 
@@ -417,7 +419,8 @@ plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2005
 ```
 
 
-![png](output_17_0.png)
+<img width="451" height="267" alt="output_17_0" src="https://github.com/user-attachments/assets/0fee874e-1b73-47ad-89a5-602bd18cf2fd" />
+
 
 
 
@@ -436,7 +439,8 @@ fig.tight_layout()
 ```
 
 
-![png](output_18_0.png)
+<img width="987" height="276" alt="output_18_0" src="https://github.com/user-attachments/assets/9d484ed4-dca8-4605-8f0f-afd6cb18cfd0" />
+
 
 
 
@@ -448,7 +452,7 @@ fig.tight_layout()
 
 
 
-## Analyzing Patient Data
+## Analyzing Patient Data pt. 1 and 2
 
 In this analysis, we looked at inflammation data for multiple patients.
 
@@ -682,4 +686,93 @@ print(numpy.mean(data, axis = 1))
      5.95  6.275 5.7   6.1   6.825 5.975 6.725 5.7   6.25  6.4   7.05  5.9  ]
 
 
+## Analyzing Patient data pt.3 (data_visualization)
+
+```python
+import numpy
+data = numpy.loadtxt(fname= 'inflammation-01.csv' , delimiter = ',')
+```
+
+
+```python
+# Heat map of patient inflammation over time
+import matplotlib.pyplot
+image = matplotlib.pyplot.imshow(data)
+matplotlib.pyplot.show()
+```
+
+
+<img width="178" height="251" alt="output_1_0" src="https://github.com/user-attachments/assets/127c8586-f049-419a-8ae0-888311a48b29" />
+
+
+
+
+```python
+# Average inflammation over time
+
+ave_inflammation = numpy.mean(data, axis = 0)
+ave_plot = matplotlib.pyplot.plot(ave_inflammation)
+matplotlib.pyplot.show()
+```
+
+
+<img width="368" height="248" alt="output_2_0" src="https://github.com/user-attachments/assets/ed2b6ad3-97dd-4641-8f27-1d9b1200cc23" />
+
+
+
+
+```python
+max_plot = matplotlib.pyplot.plot(numpy.amax(data, axis = 0))
+matplotlib.pyplot.show()
+                                
+```
+
+
+<img width="378" height="248" alt="output_3_0" src="https://github.com/user-attachments/assets/c36d5ae0-2fbb-407f-a919-f29d478f07bc" />
+
+
+
+
+```python
+min_plot = matplotlib.pyplot.plot(numpy.amin(data, axis = 0))
+matplotlib.pyplot.show()
+```
+
+
+<img width="362" height="248" alt="output_4_0" src="https://github.com/user-attachments/assets/db4f6925-9097-4881-8893-9436514ad41c" />
+
+
+
+
+```python
+fig = matplotlib.pyplot.figure(figsize =(10.0, 3.0))
+
+axes1 = fig.add_subplot(1, 3, 1)
+axes2 = fig.add_subplot(1, 3, 2)
+axes3 = fig.add_subplot(1, 3, 3)
+
+axes1.set_ylabel('average')
+axes1.plot(numpy.mean(data, axis = 0))
+
+axes2.set_ylabel('max')
+axes2.plot(numpy.amax(data, axis = 0))
+
+axes3.set_ylabel(min)
+axes3.plot(numpy.amin(data, axis = 0))
+
+fig.tight_layout()
+
+matplotlib.pyplot.savefig('inflammation.png')
+matplotlib.pyplot.show()
+```
+
+
+<img width="712" height="208" alt="output_5_0" src="https://github.com/user-attachments/assets/f9253d91-757f-402a-b1c9-e836ee81faae" />
+
+
+
+
+```python
+
+```
 
