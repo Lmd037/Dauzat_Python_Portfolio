@@ -2,7 +2,8 @@
 This is my portfolio that has all the codes I learned during Bisc 4503. I hope to open my own dental office, and apply this knowledge to help run the office efficiently.
 
 
-##  Dauzat_First_Notebook
+##  Using Jupyter Notebooks (1 and 2) 
+### Dauzat First Notebook
 
 ```python
 %matplotlib inline
@@ -913,7 +914,7 @@ matplotlib.pyplot.show()
 
 
 
-## Storing Values and List
+## Storing Values in List
 
 ```python
 odds = [1, 3, 5, 7]
@@ -1150,7 +1151,7 @@ print(len(name))
     3
 
 
-## Mutiple Files
+## Using Mutiple Files
 
 ```python
 import glob
